@@ -62,23 +62,23 @@ All models were evaluated using K-fold cross-validation.
 
 ## Hyperparameter Tuning 
 For the Decision Tree model, we performed:
-i. GridSearchCV
-ii. 5-fold cross-validation
-iii. Tuning of max_depth, min_samples_split, min_samples_leaf, max_features
-iv. Validation curves to assess bias-variance tradeoff
+- GridSearchCV
+- 5-fold cross-validation
+- Tuning of max_depth, min_samples_split, min_samples_leaf, max_features
+- Validation curves to assess bias-variance tradeoff
 
 ## Results
 1. Baseline Linear Regression: R² ≈ 0.22 (initial simple model)
 2. Improved Linear Model: R² ≈ 0.63
 3. Tuned Decision Tree: R² ≈ 0.69
-         i. Lower RMSE and MAE than linear models
-         ii. Better capture of nonlinear geographic & temporal interactions
+         - Lower RMSE and MAE than linear models
+         - Better capture of nonlinear geographic & temporal interactions
    
 The Decision Tree was selected as the final model due to superior predictive performance and stable cross-validation results.
 
-##Key Insights 
-i. Trip duration is strongly nonlinear
-ii. Manhattan distance is one of the most predictive features
-iii. Time-of-day effects significantly influence travel duration
-iv. Linear regression struggles to capture geographic interaction effects
+## Key Insights 
+- Trip duration is strongly nonlinear
+- Manhattan distance is one of the most predictive features
+- Time-of-day effects significantly influence travel duration
+- Linear regression struggles to capture geographic interaction effects
 
