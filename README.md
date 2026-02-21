@@ -1,7 +1,7 @@
 # Predicting_NYC_Taxi_Trip_Durations
 Built a scalable ML pipeline to predict NYC taxi trip duration (1.45M+ rides) using feature engineering (Manhattan distance, cyclical encoding), RFE, and 5-fold cross-validation. Improved R² from 0.22 to 0.69 with a tuned Decision Tree model.
 
-##Tech Stack:
+## Tech Stack:
 Python
 Colab
 pandas
@@ -10,12 +10,12 @@ scikit-learn
 Matplotlib
 Seaborn
 
-##Overview
+## Overview
 This project builds and evaluates machine learning models to predict NYC taxi trip duration using geospatial and temporal features. The full workflow includes exploratory data analysis (EDA), anomaly detection, feature engineering, model comparison, hyperparameter tuning, and final model selection.
 
 Dataset sourced from the Kaggle NYC Taxi Trip Duration competition (training data only).
 
-##Dataset
+## Dataset
 i. ~1.45M rides
 ii. 11 Original Features
 iii. Target: trip_duration (seconds)
@@ -25,7 +25,7 @@ Key Feature Groups:
 2. Temporal: pickup datetime, day of week, month of year
 3. Trip metadata: passenger count, vendorID
 
-##Data Cleaning and Preprocessing 
+## Data Cleaning and Preprocessing 
 We applied structured filtering to remove anomalies and unrealistic entries:
 i. Removed trips < 90 seconds or > 4 hours
 ii. Filtered passenger counts outside valid range (1–7)
@@ -34,7 +34,7 @@ iv. Applied log transformation to target (log_duration) to reduce skewness
 
 These steps improved distribution stability and model suitability for regression.
 
-##Feature Engineering
+## Feature Engineering
 Engineered features included:
 1. Manhattan Distance (proxy for route distance)
 2. Log-transformed Manhattan Distance
@@ -45,7 +45,7 @@ Engineered features included:
 
 Recursive Feature Elimination (RFE) was used to rank and select the most informative predictors.
 
-##Models Evaluated 
+## Models Evaluated 
 We compared multiple regression approaches:
 1. Linear Regression
 2. Ridge Regression
@@ -59,14 +59,14 @@ Evaluation metrics:
 
 All models were evaluated using K-fold cross-validation.
 
-##Hyperparameter Tuning 
+## Hyperparameter Tuning 
 For the Decision Tree model, we performed:
 i. GridSearchCV
 ii. 5-fold cross-validation
 iii. Tuning of max_depth, min_samples_split, min_samples_leaf, max_features
 iv. Validation curves to assess bias-variance tradeoff
 
-##Results
+## Results
 1. Baseline Linear Regression: R² ≈ 0.22 (initial simple model)
 2. Improved Linear Model: R² ≈ 0.63
 3. Tuned Decision Tree: R² ≈ 0.69
