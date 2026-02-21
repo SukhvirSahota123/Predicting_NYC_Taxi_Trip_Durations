@@ -17,9 +17,9 @@ This project builds and evaluates machine learning models to predict NYC taxi tr
 Dataset sourced from the Kaggle NYC Taxi Trip Duration competition (training data only).
 
 ## Dataset
-i. ~1.45M rides
-ii. 11 Original Features
-iii. Target: trip_duration (seconds)
+- ~1.45M rides
+- 11 Original Features
+- Target: trip_duration (seconds)
 
 Key Feature Groups:
 1. Geospatial: pickup/dropoff latitude & longitude
