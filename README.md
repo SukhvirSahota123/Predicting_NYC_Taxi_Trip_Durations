@@ -3,6 +3,7 @@ Built a scalable ML pipeline to predict NYC taxi trip duration (1.45M+ rides) us
 
 ## Tech Stack:
 - Python
+  
 - Colab
 - pandas
 - NumPy
